@@ -1,0 +1,49 @@
+     
+  q1.  2nd largest element
+
+             //input arr
+
+         Scanner sc = new Scanner(System.in);
+         int arr[] = new int[6];
+         for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //short arr
+
+        int temp;
+        for (int k = 0; k < arr.length; k++) {
+            for (int m = k + 1; m < arr.length; m++) {
+                if (arr[k] > arr[m]) {
+                    temp = arr[k];
+                    arr[k] = arr[m];
+                    arr[m] = temp;
+                }
+            }
+        }
+        for (int j = 0; j < arr.length; j++) {
+            System.out.print(arr[j] + " ");
+        }
+        System.out.println( );
+
+        //2nd largest element
+
+         for(int n = arr.length; n>=1; n--){
+             if(arr[arr.length-1] >arr[n-2]){
+                 System.out.println(arr[n-2]);
+                 break;
+             }
+         }
+ 
+q2. swap values of 2 variable without using 3rd variable
+
+        int a = 10;
+        int b = 20;
+        System.out.println("a  = " + a);
+        System.out.println("b  = " + b);
+            a = a+b;
+            b= a-b;
+            a=a-b;
+        System.out.println( );
+        System.out.println("a  = " + a);
+        System.out.println("b  = " + b);
